@@ -1,0 +1,79 @@
+section.portfolio#portfolio
+	.line-block
+		.header { Портфолио }
+		.portfolio__tabs
+			p.portfolio__tab.nav__link.portfolio__tab_active(data-filter='*') Все
+			p.portfolio__tab.nav__link(data-filter='.html-layout') Верстка
+			p.portfolio__tab.nav__link(data-filter='.vue') Vue
+			p.portfolio__tab.nav__link(data-filter='.wordpress') Wordpress
+			p.portfolio__tab.nav__link(data-filter='.node-js') Node js
+	.portfolio__content(
+			class='parallax-window'
+			data-parallax='scroll'
+			data-image-src='images/portfolio-4.jpg'
+		)
+		.container.portfolio__grid
+			.portfolio__item.isotope-item.html-layout(data-portfolio='elite')
+				.portfolio__item__content
+					img(src='images/works/elite-seller.jpg')
+					p.portfolio__item__name Elite Seller
+			.portfolio__item.isotope-item.html-layout(data-portfolio='vipDep')
+				.portfolio__item__content
+					img(src='images/works/vip-deposits.jpg')
+					p.portfolio__item__name Vip Deposits
+			.portfolio__item.isotope-item.html-layout.vue(data-portfolio='beautify')
+				.portfolio__item__content
+					img(src='images/works/beautify.jpg')
+					p.portfolio__item__name Beautify
+			.portfolio__item.isotope-item.html-layout(data-portfolio='bee')
+				.portfolio__item__content
+					img(src='images/works/bee-mining.jpg')
+					p.portfolio__item__name Bee Mining
+			.portfolio__item.isotope-item.html-layout.vue(data-portfolio='bookCab')
+				.portfolio__item__content
+					img(src='images/works/book-cab.jpg')
+					p.portfolio__item__name Book Cab
+			.portfolio__item.isotope-item.html-layout.wordpress(data-portfolio='oxford')
+				.portfolio__item__content
+					img(src='images/works/oxford.jpg')
+					p.portfolio__item__name Oxford Market
+			.portfolio__item.isotope-item.html-layout.wordpress(data-portfolio='stavropol')
+				.portfolio__item__content
+					img(src='images/works/stavropol.jpg')
+					p.portfolio__item__name Stavropol
+			.portfolio__item.isotope-item.html-layout(data-portfolio='topSeller')
+				.portfolio__item__content
+					img(src='images/works/top-seller.jpg')
+					p.portfolio__item__name Top Seller
+			.portfolio__item.isotope-item.vue.node-js(data-portfolio='ssr')
+				.portfolio__item__content
+					img(src='images/works/ssr-blog.jpg')
+					p.portfolio__item__name SSR blog
+			.portfolio__item.isotope-item.html-layout.firebase(data-portfolio='valeri')
+				.portfolio__item__content
+					img(src='images/works/valeri-marcon.jpg')
+					p.portfolio__item__name Valeri Marcon
+			.portfolio__item.isotope-item.html-layout(data-portfolio='mmco')
+				.portfolio__item__content
+					img(src='images/works/mmco.jpg')
+					p.portfolio__item__name MMCO
+			.portfolio__item.isotope-item.vue(data-portfolio='crm')
+				.portfolio__item__content
+					img(src='images/works/firebase-app.jpg')
+					p.portfolio__item__name Домашняя бухгалтерия
+			.portfolio__item.isotope-item.html-layout.wordpress(data-portfolio='arkada')
+				.portfolio__item__content
+					img(src='images/works/arkada.jpg')
+					p.portfolio__item__name Arkada
+			.portfolio__item.isotope-item.html-layout(data-portfolio='motochrome')
+				.portfolio__item__content
+					img(src='images/works/motochrome.jpg')
+					p.portfolio__item__name Motochrome
+			.portfolio__item.isotope-item.html-layout.wordpress(data-portfolio='petshop')
+				.portfolio__item__content
+					img(src='images/works/petshop.jpg')
+					p.portfolio__item__name Pet Shop
+			.portfolio__item.isotope-item.html-layout(data-portfolio='v2-studio')
+				.portfolio__item__content
+					img(src='images/works/v2-studio.jpg')
+					p.portfolio__item__name V2 studio

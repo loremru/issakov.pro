@@ -1,0 +1,54 @@
+.skills
+  &__content
+    position: relative
+    padding: 60px 0
+    background: $bg
+    background: $bg-gradient
+    min-height: 550px
+    .container
+      max-width: 1024px
+      margin: 0 auto
+      display: block
+  &__item
+    &__content
+      display: flex
+      flex-direction: column
+      align-items: center
+    img
+      height: 150px
+      transition: 0.3s
+    .progress-bar
+      margin-bottom: 18px
+      width: 70%
+    &__name
+      transition: 0.3s
+      font-size: 29px
+      font-weight: normal
+      color: $text
+      margin: 15px 0
+    .big-text
+      color: $text
+    &_center
+      .skills__item
+        &__name
+          font-size: 39px
+      img
+        height: 210px
+  .tns-controls
+    width: 100%
+    max-width: 1200px
+    position: absolute
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 420px
+    left: 50%
+    transform: translateX(-50%)
+  button
+    border: none
+    padding: 0
+    background: none
+    overflow: visible
+    transition: 0.3s
+    &:disabled
+      opacity: 0

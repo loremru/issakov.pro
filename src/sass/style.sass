@@ -1,0 +1,202 @@
+@import "_colors"
+@import "_fonts"
+@import "sections/main"
+@import "sections/coopeation"
+@import "sections/technologies"
+@import "sections/portfolio"
+@import "sections/skills"
+
+*
+  font-family: 'Bebas Neue', sans-serif
+  font-weight: 300
+  outline: none
+  box-sizing: border-box
+
+p, h1, h2
+  margin: 0
+
+.container
+  width: 100%
+  max-width: 1240px
+  margin: 0 auto
+  padding-left: 20px
+  padding-right: 20px
+
+.br
+  display: block
+
+.input
+  font-size: 23px
+  border-radius: 10px
+  padding-left: 25px
+  border: 1px solid black
+  height: 40px
+  resize: none
+  &::-webkit-input-placeholder
+    color: #000
+
+textarea.input
+  padding-top: 17px
+
+.btn
+  background-color: $dark-blue
+  border-radius: 10px
+  border: none
+  height: 40px
+  padding: 0 30px
+  cursor: pointer
+  color: $light-blue
+  font-size: 22px
+  transition: 0.2s
+  &:hover
+    color: $dark-blue
+    background-color: $light-blue
+
+.header
+  font-weight: normal
+  font-size: 42px
+  text-align: center
+  margin-bottom: 30px
+
+.text
+  font-size: 19px
+  color: $text
+  font-family: "Century Gothic", 'sans-serif'
+
+.big-text
+  font-size: 24px
+
+.text-center
+  text-align: center
+
+.line-block
+  padding: 40px 0
+  background-color: #fff
+
+.progress-bar
+  width: 100%
+  height: 6px
+  background-color: #fff
+  border-radius: 3px
+  border: none
+  box-shadow: 0px 0px 10px 0px #4a4e796b
+  span
+    height: 100%
+    background-color: $dark-blue
+    width: 50%
+    display: block
+    border-bottom-left-radius: 3px
+    border-top-left-radius: 3px
+
+.arrow
+  cursor: pointer
+  width: 49px
+  user-select: none
+  transition: 0.3s
+  &_prev
+    transform: rotateZ(180deg)
+    &:hover
+      filter: drop-shadow(5px -10px 5px $shadow-color)
+  &_next
+    &:hover
+      filter: drop-shadow(-5px 10px 5px $shadow-color)
+
+.request
+  padding: 60px 0
+  background-color: #fff
+  h3
+    font-size: 40px
+    margin-bottom: 40px
+  .btn
+    display: block
+    margin: 0 auto
+
+.footer
+  margin-top: 0
+  background: $bg
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 25px 0
+  .main__form__socials
+    margin: 0
+    svg
+      path
+        fill: $dark-blue
+      &:hover
+        path
+          fill: #fff
+
+.bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,.6)
+  z-index: 2100
+  display: none
+  transition: 0.2s
+  opacity: 0
+  cursor: pointer
+  &_active
+    opacity: 1
+
+.modal
+  background-color: #fff
+  width: 900px
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -1000px)
+  transition: 0.3s
+  padding: 30px
+  border-radius: 10px
+  cursor: auto
+  &_active
+    transform: translate(-50%,-50%)
+  &__times
+    position: absolute
+    top: 15px
+    right: 15px
+    font-size: 39px
+    height: 23px
+    line-height: 23px
+    color: $text
+    cursor: pointer
+  &__content
+    .cooperation__block__name
+      margin-top: 0
+      margin-bottom: 30px
+    &__body
+      width: 100%
+      display: flex
+      justify-content: space-between
+    &__image
+      width: 70%
+      min-height: 332px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      #modal-image
+        width: 100%
+        display: none
+    &__info
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      p
+        margin-bottom: 15px
+  &__text
+    font-size: 25px
+    font-weight: normal
+
+    color: $text
+    span
+      //font-weight: normal
+      //color: $dark-blue
+  &__footer
+    margin-top: 30px

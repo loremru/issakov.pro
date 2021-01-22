@@ -1,0 +1,32 @@
+doctype html
+html
+	include includes/_head
+	body
+		include sections/main
+		include sections/cooperation
+		include sections/technologies
+		include sections/portfolio
+		include sections/skills
+		section.request
+			h3.cooperation__greeting
+				img(src='images/point-down.png')#point-down.animate__animated
+				span Свяжитесь со мной и получите отклик в течение 30 минут.
+			button.btn.scrollToId(data-href='#main') Оставить заявку
+		include includes/_footer
+
+	.bg
+		.modal
+			.modal__times &times;
+			.modal__content
+				h3.cooperation__block__name#modal-name 1
+				.modal__content__body
+					.modal__content__image
+						img(src='images/loading.gif')#modal-loading
+						img(src='images/works/elite-seller.jpg')#modal-image
+					.modal__content__info
+						p.modal__text#modal-price Бюджет: <span>1 руб.</span>
+						p.modal__text#modal-time Сроки: <span>1 дн.</span>
+						a(href='#' target='_blank')
+							button.btn Посмотреть
+				.modal__footer
+					.modal__text#modal-target <span>Задача:</span> 1
