@@ -5,7 +5,7 @@ export default {
 		price: '39 000',
 		time: '20',
 		image: 'elite-seller.jpg',
-		link: ''
+		link: 'works/seller'
 	},
 	'vipDep': {
 		name: 'Vip Deposits',
@@ -13,7 +13,7 @@ export default {
 		price: '10 000',
 		time: '7',
 		image: 'vip-deposits.jpg',
-		link: ''
+		link: 'works/app/dashboard.html'
 	},
 	'beautify': {
 		name: 'Вeautify',
@@ -21,7 +21,7 @@ export default {
 		price: '15 000',
 		time: '7',
 		image: 'beautify.jpg',
-		link: ''
+		link: 'https://master.btfy.ru/nastya.smirnova'
 	},
 	'bee': {
 		name: 'bee-mining',
@@ -29,7 +29,7 @@ export default {
 		price: '8 000',
 		time: '3',
 		image: 'bee-mining.jpg',
-		link: ''
+		link: 'works/Bee-mining/'
 	},
 	'bookCab': {
 		name: 'Book Cab',
@@ -37,7 +37,7 @@ export default {
 		price: '12 000',
 		time: '7',
 		image: 'book-cab.jpg',
-		link: ''
+		link: 'https://bookcab.fr/book-now'
 	},
 	'oxford': {
 		name: 'Oxford Market',
@@ -45,7 +45,7 @@ export default {
 		price: '8 000',
 		time: '3',
 		image: 'oxford.jpg',
-		link: ''
+		link: 'works/oxford/'
 	},
 	'stavropol': {
 		name: 'Вкус Ставрополья',
@@ -53,7 +53,7 @@ export default {
 		price: '10 000',
 		time: '5',
 		image: 'stavropol.jpg',
-		link: ''
+		link: 'works/stavropol'
 	},
 	'topSeller': {
 		name: 'Topse11er',
@@ -61,7 +61,7 @@ export default {
 		price: '6 000',
 		time: '2',
 		image: 'top-seller.jpg',
-		link: ''
+		link: 'works/topseller/'
 	},
 	'ssr': {
 		name: 'SSR Blog',
@@ -69,7 +69,7 @@ export default {
 		price: '',
 		time: '7',
 		image: 'ssr-blog.jpg',
-		link: ''
+		link: 'https://nuxt-js-ssr-blog.herokuapp.com/'
 	},
 	'valeri': {
 		name: 'Valeri Marcon',
@@ -77,7 +77,7 @@ export default {
 		price: '26 000',
 		time: '20',
 		image: 'valeri-marcon.jpg',
-		link: ''
+		link: 'works/valeriMarcon'
 	},
 	'mmco': {
 		name: 'MMCO',
@@ -85,14 +85,14 @@ export default {
 		price: '25 000',
 		time: '14',
 		image: 'mmco.jpg',
-		link: ''
+		link: 'works/mmco/events.html'
 	},
 	'crm': {
 		name: 'Домашняя бухгалтерия',
 		target: 'Сделать сложное SPA приложение с базой данных и регистрацией на firebase.',
 		time: '9',
 		image: 'firebase-app.jpg',
-		link: ''
+		link: 'https://vuelearn-da0d6.firebaseapp.com/'
 	},
 	'arkada': {
 		name: 'Arkada',
@@ -100,7 +100,7 @@ export default {
 		price: '9 000',
 		time: '8',
 		image: 'arkada.jpg',
-		link: ''
+		link: 'works/arkada'
 	},
 	'motochrome': {
 		name: 'Motochrome',
@@ -108,7 +108,7 @@ export default {
 		price: '8 000',
 		time: '4',
 		image: 'motochrome.jpg',
-		link: ''
+		link: 'works/motochrome'
 	},
 	'petshop': {
 		name: 'Pet shop',
@@ -116,7 +116,7 @@ export default {
 		price: '20 000',
 		time: '16',
 		image: 'petshop.jpg',
-		link: ''
+		link: 'works/pet-shop'
 	},
 	'v2-studio': {
 		name: 'V2 studio',
@@ -124,6 +124,6 @@ export default {
 		price: '7 000',
 		time: '6',
 		image: 'v2-studio.jpg',
-		link: ''
+		link: 'works/V2-html'
 	},
 }

@@ -144,6 +144,7 @@ function visualWork(work) {
 	})
 	$('#modal-name').text(products[work].name)
 	$('#modal-target').html('<span>Задача: </span>' + products[work].target)
+	$('#modal-link').attr('href', products[work].link)
 	if (products[work].price) $('#modal-price span').text(products[work].price + ' руб.')
 	else $('#modal-price').hide()
 	if (products[work].time) $('#modal-time span').text(products[work].time + ' дн.')
