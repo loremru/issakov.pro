@@ -129,7 +129,7 @@
       top: 100%
       left: 0
       padding: 0 20px 20px
-      box-shadow: 0px 20px 20px 0 #4a4e7926
+      box-shadow: 0 20px 20px 0 #4a4e7926
       &_active
         display: flex !important
         position: absolute
@@ -137,8 +137,10 @@
     &__logo
       margin-left: 40px
       font-size: 28px
-      height: 34px
+      height: auto
       margin-right: 0
+      line-height: normal
+      transform: translateY(4px)
     &__link
       margin-bottom: 20px
       &:last-of-type
@@ -174,8 +176,10 @@
   .main
     &__header
       h1
-        border-bottom: 2px solid black
-        font-size: 6.3vw
+        border-bottom: none
+        font-size: 10.5vw
+      h2
+        font-size: 7.5vw
     &__form
       padding: 30px
     &__block

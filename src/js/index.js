@@ -12,10 +12,10 @@ import products from '@/js/products'
 import 'animate.css'
 
 $(function() {
-	console.log(`Что ты тут забыл странник?
-							Не беспокойся, все с кодом отлично :)
-							Скорей уже пиши мне
-							Почта: mr.nonamerz08@yandex.ru`)
+	console.log(`Что ты тут забыл странник?`)
+	console.log('Не беспокойся, все с кодом отлично :)')
+	console.log('Скорей уже пиши мне')
+	console.log('Почта: mr.nonamerz08@yandex.ru')
 	toggleNav()
 	const $container = $('.portfolio__grid')
 
@@ -60,12 +60,15 @@ $(function() {
 		nextArrow: '<img src="images/arrow.png" class="arrow arrow_next">',
 		autoplay: true,
 		dots: true,
+		speed: 200,
 		responsive: [
 			{
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 1,
 					centerMode: false,
+					// waitForAnimate: false,
+					swipeToSlide: true,
 				}
 			}
 		]
