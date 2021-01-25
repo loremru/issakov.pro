@@ -2,6 +2,9 @@ section.main#main(class='parallax-window' data-parallax='scroll' data-image-src=
 	.container
 		.nav
 			.container
+				button.hamburger.hamburger--slider(type='button')
+					span.hamburger-box
+						span.hamburger-inner
 				p.nav__logo.scrollToId(data-href='#main') { ISSAKOV ILYA }
 				.nav__menu
 					a(href='#' data-href='#cooperation').scrollToId.nav__link Сотрудничество
@@ -12,14 +15,14 @@ section.main#main(class='parallax-window' data-parallax='scroll' data-image-src=
 				.main__header
 					h1 Я создаю быстрые и адаптивные сайты
 					h2 Разработка с нуля и доработка сайтов до результата.
-				form(action='' method='post' name='request').main__form
+				form(action='mail.php' method='post' name='request').main__form
 					input(type='name' name='name' placeholder='Ваше имя').input
 					input(type='email' name='email' placeholder='Email').input
 					textarea(name='message' placeholder='Сообщение').input
 					button.btn Оставить заявку
 					.main__form__socials
 						a(href='mailto:mr.nonamerz08@yandex.ru' target='_blank')
-							svg#Capa_1(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve')
+							svg#Capa_1(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve')
 								g
 									g
 										path(d='M507.49,101.721L352.211,256L507.49,410.279c2.807-5.867,4.51-12.353,4.51-19.279V121\

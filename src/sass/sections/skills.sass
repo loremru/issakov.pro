@@ -1,10 +1,11 @@
 .skills
+  > .container
+    background-color: #fff
   &__content
     position: relative
     padding: 60px 0
     background: $bg
     background: $bg-gradient
-    min-height: 550px
     .container
       max-width: 1024px
       margin: 0 auto
@@ -28,27 +29,47 @@
       margin: 15px 0
     .big-text
       color: $text
-    &_center
-      .skills__item
-        &__name
-          font-size: 39px
+    &.slick-center
+      .skills__item__name
+        font-size: 39px
       img
         height: 210px
-  .tns-controls
-    width: 100%
-    max-width: 1200px
-    position: absolute
+  &__slider
+    position: relative
+    .slick-track
+      min-height: 390px
+  .slick-dots
     display: flex
-    justify-content: space-between
-    align-items: center
-    height: 420px
-    left: 50%
-    transform: translateX(-50%)
-  button
-    border: none
-    padding: 0
-    background: none
-    overflow: visible
-    transition: 0.3s
-    &:disabled
-      opacity: 0
+    justify-content: center
+    margin-top: 30px
+    margin-bottom: 0
+    list-style: none
+    padding-left: 0
+    li
+      height: 8px
+      width: 8px
+      margin: 0 2px
+    button
+      width: 8px
+      height: 8px
+      background-color: #fff
+      border-radius: 100%
+      border: none
+      padding: 0
+      color: transparent
+    .slick-active
+      button
+        background-color: $dark-blue
+
+
+@media (max-width: 1200px)
+  .skills
+    &__item
+      .big-text
+        font-size: 22px
+      &__content
+        max-width: 320px
+        margin: 0 auto
+    &__slider
+      .slick-track
+        min-height: auto

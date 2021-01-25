@@ -5,12 +5,17 @@ import $ from 'jquery'
 window.$ = window.jQuery = require('jquery')
 window.isotope = require('isotope-layout/dist/isotope.pkgd')
 import 'jquery-parallax.js'
-import {tns} from 'tiny-slider/src/tiny-slider'
-import 'tiny-slider/dist/tiny-slider.css'
+import 'slick-carousel/slick/slick.min'
+import 'slick-carousel/slick/slick.scss'
+
 import products from '@/js/products'
 import 'animate.css'
 
 $(function() {
+	console.log(`Что ты тут забыл странник?
+							Не беспокойся, все с кодом отлично :)
+							Скорей уже пиши мне
+							Почта: mr.nonamerz08@yandex.ru`)
 	toggleNav()
 	const $container = $('.portfolio__grid')
 
@@ -22,18 +27,6 @@ $(function() {
 		transitionDuration: '0.7s'
 	})
 
-	$(window).resize(function() {
-		$container.isotope({
-			masonry: {
-				columnWidth: $container.width() / 3
-			}
-		})
-	})
-	$(window).scroll(() => {
-		toggleNav()
-		computeAnimation()
-	})
-
 	$('.portfolio__tab').click(function(e) {
 		$('.portfolio__tab').removeClass('portfolio__tab_active')
 		$(this).addClass('portfolio__tab_active')
@@ -41,35 +34,55 @@ $(function() {
 
 		$('.portfolio__grid').isotope({filter: selector})
 	})
-	$('.portfolio__tab').eq(0).trigger('click')
 
-	const skillsSlider = tns({
-		container: '.skills__slider',
-		items: 3,
-		autoplay: true,
-		center: true,
-		autoplayButtonOutput: false,
-		nav: true,
-		loop: false,
-		controlsText: [
-			'<img src="images/arrow.png" class="arrow arrow_prev">',
-			'<img src="images/arrow.png" class="arrow arrow_next">'
-		],
-		onInit: toggleCanterClass
+	$(window).resize(function() {
+		$container.isotope({
+			masonry: {
+				columnWidth: $container.width() / 3
+			}
+		})
 	})
+	setTimeout(() => {
+		$('.portfolio__tab').eq(0).trigger('click')
+		$(window).resize()
+	}, 1500)
 
-	skillsSlider.events.on('indexChanged', toggleCanterClass)
-
+	$(window).scroll(() => {
+		toggleNav()
+		computeAnimation()
+	})
+	$('.skills__slider').slick({
+		slidesToShow: 3,
+		centerMode: true,
+		centerPadding: 0,
+		infinite: true,
+		prevArrow: '<img src="images/arrow.png" class="arrow arrow_prev">',
+		nextArrow: '<img src="images/arrow.png" class="arrow arrow_next">',
+		autoplay: true,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 1,
+					centerMode: false,
+				}
+			}
+		]
+	})
+	$('.tns-nav button').eq(0).addClass('nav-active')
 	$('.scrollToId').click(function(e) {
 		scrollToId(this)
 	})
 	$('.portfolio__item').click(function(e) {
 		const work = $(this).attr('data-portfolio')
+		$('html').addClass('no-scroll')
 		visualWork(work)
 		showModal()
 	})
 	$('.bg, .modal__times').click(function(e) {
 		if (!$(e.target).closest('.modal').length || $(e.target).hasClass('modal__times')) {
+			$('html').removeClass('no-scroll')
 			$('.modal').removeClass('modal_active')
 			setTimeout(() => {
 				$('.bg').hide()
@@ -82,29 +95,41 @@ $(function() {
 			$('#modal-loading').show()
 		}
 	})
+	$('.hamburger').click(function(e) {
+		$(this).toggleClass('is-active')
+		$('.nav__menu').toggleClass('nav__menu_active')
+		$('.nav').toggleClass('nav_no-shadow')
+		$('.nav').toggleClass('nav_open')
+	})
 })
-
-function toggleCanterClass(info) {
-	const slides = $('.skills__item')
-	slides.removeClass('skills__item_center')
-	slides.eq(info.index).addClass('skills__item_center')
-}
 
 function scrollToId(el) {
 	const href = $(el).attr('data-href')
 	const position = $(href).offset().top - $('.nav').innerHeight()
 	$('html, body').animate({scrollTop: position + 'px'})
+	$('.nav__menu').removeClass('nav__menu_active')
+	$('.hamburger').removeClass('is-active')
+	$('.nav').removeClass('nav_no-shadow')
+	$('.nav').removeClass('nav_open')
 	if ($(el).hasClass('btn')) {
 		$('.main__form .input[type="name"]').focus()
 	}
 }
 
 function toggleNav() {
-	if ($(window).scrollTop() > $('.nav').outerHeight() - $('.nav .container').innerHeight() - 20) {
+	if ($(window).scrollTop() > toScroll()) {
 		$('.nav').addClass('nav_fixed')
 	} else {
 		$('.nav').removeClass('nav_fixed')
 	}
+}
+
+function toScroll() {
+	let toScroll = $('.nav').outerHeight() - $('.nav .container').innerHeight() - 20
+	if ($(window).width() < 1024) {
+		toScroll = $('.nav').outerHeight()
+	}
+	return toScroll
 }
 
 function visualWork(work) {
@@ -131,7 +156,6 @@ function showModal() {
 		$('.modal').addClass('modal_active')
 	}, 30)
 }
-
 
 function computeAnimation() {
 	const windowHalfHeight = $(window).innerHeight() * 0.5

@@ -25,3 +25,24 @@
     margin-bottom: 165px
   &__pc
     margin-left: 30px
+
+
+@media (max-width: 1023px)
+  .technologies
+    height: auto
+    padding: 40px 0
+    .container
+      justify-content: space-around
+      flex-direction: column
+    &__content
+      &_active
+        background-position-y: 110%
+    &__pc
+      width: 90%
+      margin: 0
+      order: 1
+      max-width: 400px
+      transform: translateX(-6px)
+    &__block
+      margin-left: 0
+      margin-bottom: 25px

@@ -28,7 +28,7 @@
       color: $soft-blue
       border-color: $soft-blue
   &_fixed
-    position: fixed
+    position: fixed !important
     top: 0
     z-index: 2000
     left: 0
@@ -38,9 +38,13 @@
     box-shadow: 0 1px 15px 0 $shadow-color
     .container
       padding: 0 20px
+  &_no-shadow
+    box-shadow: none
 
 .main
   height: 100vh
+  min-height: 940px
+  max-height: 1080px
   width: 100%
   background-size: cover
   & > .container
@@ -81,7 +85,8 @@
     justify-content: space-between
     padding: 50px 50px 30px
     border-radius: 10px
-    width: 500px
+    width: 100%
+    max-width: 500px
     box-shadow: -5px 9px 20px 0px $shadow-color
     .input
       margin-bottom: 25px
@@ -106,3 +111,72 @@
           path
             fill: $light-blue
 
+
+
+@media (max-width: 1023px)
+  .nav
+    padding: 20px
+    position: absolute
+    width: 100%
+    left: 0
+    .container
+      padding: 0
+    &__menu
+      display: none
+      width: 100%
+      flex-direction: column
+      align-items: flex-start
+      top: 100%
+      left: 0
+      padding: 0 20px 20px
+      box-shadow: 0px 20px 20px 0 #4a4e7926
+      &_active
+        display: flex !important
+        position: absolute
+        background-color: rgba(255, 255, 255, 0.95)
+    &__logo
+      margin-left: 40px
+      font-size: 28px
+      height: 34px
+      margin-right: 0
+    &__link
+      margin-bottom: 20px
+      &:last-of-type
+        margin-bottom: 0
+    &_open
+      background-color: rgba(255, 255, 255, 0.95)
+      position: fixed
+  .main
+    height: auto
+    min-height: auto
+    max-height: none
+    background-image: $bg-gradient !important
+    &__block
+      margin-top: 96px
+      padding-bottom: 60px
+      width: 100%
+    &__form
+      margin: 0 auto
+    &__header
+      width: 100%
+      text-align: center
+      margin-bottom: 30px
+      h1
+        font-size: 6.5vw
+      h2
+        font-size: 4.5vw
+        margin-top: 15px
+
+@media (max-width: 550px)
+  .nav
+    &__logo
+      margin-left: 25px
+  .main
+    &__header
+      h1
+        border-bottom: 2px solid black
+        font-size: 6.3vw
+    &__form
+      padding: 30px
+    &__block
+      padding-bottom: 45px
