@@ -77,7 +77,7 @@ export default {
 		price: '26 000',
 		time: '20',
 		image: 'valeri-marcon.jpg',
-		link: 'works/valeriMarcon'
+		link: 'https://vm-fashion-outlet.com/'
 	},
 	'mmco': {
 		name: 'MMCO',
@@ -104,7 +104,7 @@ export default {
 	},
 	'motochrome': {
 		name: 'Motochrome',
-		target: 'Быстро сверстать.',
+		target: 'Быстро сверстать. Сделать калькулятор цен.',
 		price: '8 000',
 		time: '4',
 		image: 'motochrome.jpg',
